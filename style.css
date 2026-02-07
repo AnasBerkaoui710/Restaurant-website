@@ -72,11 +72,16 @@ nav {
 .nav-menu li a:hover {
     color: white;
     background-color: #E55727;
+    box-shadow:2px 2px 2px #333;
 }
 
 .nav-menu li a.active {
     background-color: #E55727;
     color: white;
+}
+
+.nav-menu li a.active:hover {
+    box-shadow:2px 2px 2px #333;
 }
 
 .nav-menu li a.order-btn {
@@ -86,6 +91,7 @@ nav {
 
 .nav-menu li a.order-btn:hover {
     background-color: #E55727;
+    box-shadow:2px 2px 2px #333;
 }
 
 .hamburger {
@@ -686,5 +692,453 @@ footer {
     
     .item-price {
         font-size: 20px;
+    }
+}
+
+/* Checkout Page Styles */
+.checkout-container {
+    max-width: 800px;
+    margin: 100px auto 50px;
+    padding: 0 20px;
+}
+
+.checkout-wrapper {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 30px;
+}
+
+/* Receipt Header */
+.receipt-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.device-icon {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 12px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.device-icon i {
+    font-size: 24px;
+    color: #333;
+}
+
+.receipt-title h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.receipt-subtitle {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.receipt-date {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Receipt Navigation */
+.receipt-nav {
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.receipt-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.receipt-nav li a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.receipt-nav li a:hover,
+.receipt-nav li a.active {
+    background-color: #E55727;
+    color: white;
+}
+
+/* Order Receipt */
+.order-receipt {
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.receipt-items {
+    margin-bottom: 30px;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.receipt-item:last-child {
+    border-bottom: none;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-info h3 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+
+.item-quantity {
+    color: #E55727;
+    font-weight: 600;
+    background-color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.item-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Receipt Totals */
+.receipt-subtotal,
+.receipt-tax,
+.receipt-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.receipt-subtotal {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+}
+
+.receipt-total {
+    padding-top: 20px;
+    border-top: 2px solid #333;
+    margin-top: 10px;
+}
+
+.subtotal-label,
+.tax-label,
+.total-label {
+    font-size: 16px;
+    color: #666;
+}
+
+.subtotal-price,
+.tax-price {
+    font-size: 16px;
+    color: #666;
+}
+
+.total-label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.total-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #E55727;
+}
+
+/* Order Details */
+.order-details {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    color: #666;
+    font-size: 14px;
+}
+
+.detail-value {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Thank You Section */
+.thank-you-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f8f8f8 0%, white 100%);
+    border-radius: 15px;
+    margin: 30px 0;
+    border: 2px dashed #E55727;
+}
+
+.thank-you-icon {
+    font-size: 64px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.thank-you-section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.thank-you-message {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+.order-status {
+    font-size: 18px;
+    color: #333;
+}
+
+.status-preparing {
+    color: #E55727;
+    font-weight: 600;
+    background-color: rgba(229, 87, 39, 0.1);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.btn-home,
+.btn-order,
+.btn-receipt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-home {
+    background-color: #333;
+    color: white;
+}
+
+.btn-home:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+.btn-order {
+    background-color: #E55727;
+    color: white;
+}
+
+.btn-order:hover {
+    background-color: #c94a20;
+    transform: translateY(-3px);
+}
+
+.btn-receipt {
+    background-color: white;
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+.btn-receipt:hover {
+    background-color: #f8f8f8;
+    border-color: #333;
+    transform: translateY(-3px);
+}
+
+/* Order Timeline */
+.order-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 40px 0 20px;
+}
+
+.order-timeline::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.timeline-step.active .step-icon {
+    background-color: #E55727;
+    color: white;
+}
+
+.timeline-step.active .step-label {
+    color: #333;
+    font-weight: 600;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #999;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.step-label {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.step-time {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout-wrapper {
+        padding: 20px;
+    }
+    
+    .receipt-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .receipt-nav li a {
+        display: block;
+        text-align: center;
+    }
+    
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-timeline {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .order-timeline::before {
+        display: none;
+    }
+    
+    .timeline-step {
+        flex-direction: row;
+        gap: 20px;
+        text-align: left;
+        align-items: center;
+    }
+    
+    .step-icon {
+        margin-bottom: 0;
+        min-width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .receipt-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .device-icon {
+        margin-right: 0;
+        justify-content: center;
+    }
+    
+    .receipt-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .item-price {
+        align-self: flex-end;
     }
 }
