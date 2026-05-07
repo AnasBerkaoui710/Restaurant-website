@@ -5,11 +5,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
     color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
 }
 
 /* Navigation Styles */
@@ -112,7 +114,7 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: 128px;
+    font-size: clamp(48px, 10vw, 128px);
     color: #E55727;
     line-height: 1;
     margin-bottom: 20px;
@@ -388,6 +390,11 @@ footer {
     
     .features, .menu-items, .footer-content {
         grid-template-columns: 1fr;
+    }
+
+    .hero-image img {
+        height: auto;
+        max-height: 400px;
     }
 }
 
@@ -1402,198 +1409,155 @@ footer {
     }
 }
 
-/* Receipt Redesign Styles */
-.order-receipt-container {
+/* Minimalist Receipt Styles */
+.minimal-receipt {
     background-color: white;
-    padding: 40px;
-    border-radius: 5px;
+    padding: 30px;
     color: #333;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #eee;
 }
 
-.receipt-header-main {
+.receipt-header-simple {
     text-align: center;
-    margin-bottom: 30px;
-}
-
-.receipt-header-main h1 {
-    color: #E55727;
-    font-size: 42px;
-    margin-bottom: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.chef-logo {
-    width: 80px;
-    height: 80px;
-    background-color: #E55727;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 40px;
-    position: relative;
-}
-
-.restaurant-info-box {
     margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 1.4;
-    font-weight: 600;
 }
 
-.receipt-tagline {
-    font-style: italic;
+.receipt-header-simple h1 {
     font-size: 24px;
-    margin: 20px 0;
+    margin-bottom: 5px;
     color: #333;
-    font-weight: 500;
 }
 
-.receipt-meta {
+.receipt-meta-simple {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 30px;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 5px 0;
 }
 
-.meta-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.meta-value {
-    background-color: #ffe8e0;
-    padding: 5px 15px;
-    border-radius: 4px;
-    font-weight: 600;
-    min-width: 80px;
-}
-
-.receipt-table {
+.minimal-table {
     width: 100%;
+    margin: 20px 0;
     border-collapse: collapse;
-    margin-bottom: 30px;
 }
 
-.receipt-table th {
-    background-color: #E55727;
-    color: white;
-    padding: 12px;
+.minimal-table th {
     text-align: left;
-    border: 1px solid #E55727;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+    font-size: 14px;
 }
 
-.receipt-table td {
-    padding: 12px;
-    border-left: 1px solid #f0f0f0;
-    border-right: 1px solid #f0f0f0;
+.minimal-table td {
+    padding: 10px 0;
+    font-size: 14px;
 }
 
-.receipt-table tbody tr:nth-child(odd) {
-    background-color: #fff;
-}
-
-.receipt-table tbody tr:nth-child(even) {
-    background-color: #fcfcfc;
-}
-
-.receipt-table tbody tr:last-child td {
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.receipt-table td:last-child {
-    background-color: #ffe8e0;
-    font-weight: 600;
+.minimal-table td:last-child {
     text-align: right;
 }
 
-.receipt-table th:last-child {
-    text-align: right;
+.receipt-totals-simple {
+    margin-top: 20px;
 }
 
-.receipt-table th:nth-child(2),
-.receipt-table th:nth-child(3),
-.receipt-table td:nth-child(2),
-.receipt-table td:nth-child(3) {
-    text-align: center;
-}
-
-.total-label-cell {
-    text-align: right;
-    font-weight: 600;
-    color: #333;
-}
-
-.net-total-label {
-    text-align: right;
-    font-weight: 700;
-    color: #333;
-    font-size: 18px;
-}
-
-.receipt-table tfoot td {
-    border: none;
-    padding: 10px;
-}
-
-.receipt-footer-msg {
-    text-align: center;
-    font-size: 28px;
-    margin: 40px 0;
-    font-weight: 500;
-    color: #333;
-}
-
-.buffet-info {
+.total-row {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 40px;
-    font-size: 16px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 14px;
 }
 
-.buffet-label {
-    color: #E55727;
-    font-weight: 700;
+.grand-total {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
 }
 
-.buffet-price {
-    background-color: #ffe8e0;
-    padding: 2px 10px;
-    border-radius: 4px;
-    font-weight: 600;
+.receipt-footer-simple {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
 }
 
-.action-buttons-receipt {
+.action-buttons-minimal {
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-top: 40px;
 }
 
-.btn-home-receipt {
-    text-decoration: none;
+.btn-print {
+    background-color: #E55727;
+    color: white;
+    border: none;
     padding: 12px 30px;
     border-radius: 25px;
-    background-color: #333;
-    color: white;
+    cursor: pointer;
     font-weight: 600;
-    transition: all 0.3s ease;
 }
 
-.btn-home-receipt:hover {
-    background-color: #555;
+.btn-home-simple {
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #333;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .minimal-receipt {
+        padding: 20px;
+        width: 100%;
+        border: none;
+    }
 }
 
 @media print {
-    nav, footer, .action-buttons-receipt {
+    nav, footer, .action-buttons-minimal {
         display: none;
     }
-    .checkout-wrapper {
-        box-shadow: none;
+    .minimal-receipt {
+        border: none;
         padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 54px;
+    }
+    
+    .about-hero h1 {
+        font-size: 36px;
+    }
+
+    .contact-header h2 {
+        font-size: 32px;
+    }
+    
+    .menu-title h1 {
+        font-size: 36px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .logo a {
+        font-size: 20px;
     }
 }

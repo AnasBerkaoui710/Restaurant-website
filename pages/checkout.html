@@ -42,88 +42,61 @@
                 </ul>
             </div> -->
 
-            <!-- New Receipt Structure -->
-            <div class="order-receipt-container">
-                <div class="receipt-header-main">
-                    <h1>Restaurant Receipt</h1>
-                    <div class="chef-logo">
-                        <i class="fas fa-utensils"></i>
+            <!-- Minimalist Receipt Structure -->
+            <div class="minimal-receipt" id="printableReceipt">
+                <div class="receipt-header-simple">
+                    <h1>GUSTO RESTAURANT</h1>
+                    <p>123 Gourmet Street, Food City</p>
+                    <p>(123) 456-7890</p>
+                    <hr>
+                    <div class="receipt-meta-simple">
+                        <span>Receipt: #REC-109</span>
+                        <span id="currentDate"></span>
                     </div>
-                    <div class="restaurant-info-box">
-                        <p>["Delicacies From the Oven"]</p>
-                        <p>[123 Gourmet Street, Food City, FC 12345]</p>
-                        <p>[(123) 456-7890]</p>
-                        <p>[info@restaurant.com] | [www.restaurant.com]</p>
-                    </div>
-                    <h2 class="receipt-tagline">Authentic Food At its Finest!</h2>
+                    <hr>
                 </div>
 
-                <div class="receipt-meta">
-                    <div class="meta-item">
-                        <span>Receipt No.:</span>
-                        <span class="meta-value">REC_109</span>
-                    </div>
-                    <div class="meta-item">
-                        <span>Date:</span>
-                        <span class="meta-value" id="currentDate">02-09-22</span>
-                    </div>
-                    <div class="meta-item">
-                        <span>Time:</span>
-                        <span class="meta-value" id="currentTime">10:10:23</span>
-                    </div>
-                </div>
-
-                <table class="receipt-table">
+                <table class="minimal-table">
                     <thead>
                         <tr>
-                            <th>List of Items</th>
-                            <th>Quantity</th>
-                            <th>Unit Cost</th>
-                            <th>Amount</th>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>Price</th>
                         </tr>
                     </thead>
                     <tbody class="receipt-items">
                         <!-- Items will be injected here by JS -->
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td class="total-label-cell">Total Amount</td>
-                            <td class="subtotal-price">$0.00</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td class="total-label-cell">Vat @17.5%</td>
-                            <td class="tax-price">$0.00</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td class="net-total-label">Net Amount</td>
-                            <td class="total-price">$0.00</td>
-                        </tr>
-                    </tfoot>
                 </table>
 
-                <div class="receipt-footer-msg">
-                    <p>Eat As much As You Like!</p>
+                <hr>
+                
+                <div class="receipt-totals-simple">
+                    <div class="total-row">
+                        <span>Subtotal:</span>
+                        <span class="subtotal-price">$0.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Tax (17.5%):</span>
+                        <span class="tax-price">$0.00</span>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>Total:</span>
+                        <span class="total-price">$0.00</span>
+                    </div>
                 </div>
 
-                <div class="buffet-info">
-                    <div class="buffet-item">
-                        <span class="buffet-label">Sunday Buffet:</span>
-                        <span>Adults: <span class="buffet-price">$8.50</span></span>
-                    </div>
-                    <div class="buffet-item">
-                        <span>Children under 12: <span class="buffet-price">$5.00</span></span>
-                    </div>
+                <div class="receipt-footer-simple">
+                    <p>Thank you for your visit!</p>
+                    <p>Visit us again soon</p>
                 </div>
+            </div>
 
-                <div class="action-buttons-receipt">
-                    <button class="btn-receipt">
-                        <i class="fas fa-print"></i> Print Receipt
-                    </button>
-                    <a href="../index.html" class="btn-home-receipt">Back to Home</a>
-                </div>
+            <div class="action-buttons-minimal">
+                <button class="btn-print" onclick="window.print()">
+                    <i class="fas fa-print"></i> Print Receipt
+                </button>
+                <a href="../index.html" class="btn-home-simple">Return to Home</a>
             </div>
         </div>
     </div>

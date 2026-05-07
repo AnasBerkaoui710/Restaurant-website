@@ -86,16 +86,15 @@ function initCheckoutPage() {
     const taxEl = document.querySelector('.tax-price');
     const totalEl = document.querySelector('.total-price');
     const dateEl = document.getElementById('currentDate');
-    const timeEl = document.getElementById('currentTime');
 
     if (!receiptContainer || !subtotalEl || !taxEl || !totalEl) {
         return;
     }
 
-    // Set Date and Time
-    const now = new Date();
-    if (dateEl) dateEl.textContent = now.toLocaleDateString();
-    if (timeEl) timeEl.textContent = now.toLocaleTimeString();
+    // Set Date
+    if (dateEl) {
+        dateEl.textContent = new Date().toLocaleDateString();
+    }
 
     const savedOrder = JSON.parse(localStorage.getItem('orderItems') || '{}');
     let subtotal = 0;
@@ -104,42 +103,24 @@ function initCheckoutPage() {
 
     Object.entries(savedOrder).forEach(([name, item]) => {
         subtotal += item.total;
-        const unitPrice = item.price;
 
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${name}</td>
             <td>${item.quantity}</td>
-            <td>$${unitPrice.toFixed(2)}</td>
             <td>$${item.total.toFixed(2)}</td>
         `;
         receiptContainer.appendChild(tr);
     });
 
-    const tax = subtotal * 0.175; // Updated to 17.5% as per image
+    const tax = subtotal * 0.175;
     const total = subtotal + tax;
 
     subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
     taxEl.textContent = `$${tax.toFixed(2)}`;
     totalEl.textContent = `$${total.toFixed(2)}`;
-
-    initPrintReceipt();
 }
 
-function initPrintReceipt() {
-    const printBtn = document.querySelector('.btn-receipt');
-    const receipt = document.querySelector('.order-receipt');
-
-    if (!printBtn || !receipt) return;
-
-    printBtn.addEventListener('click', () => {
-        const original = document.body.innerHTML;
-        document.body.innerHTML = receipt.innerHTML;
-        window.print();
-        document.body.innerHTML = original;
-        location.reload();
-    });
-}
 
 /* =========================
    NAVIGATION (ALL PAGES)
