@@ -1,101 +1,63 @@
-# Restaurant Web Project
+# Gusto Restaurant - Fine Dining Experience
 
-## Overview
+A modern, responsive restaurant website featuring an interactive online ordering system, multi-page navigation, and a premium design aesthetic.
 
-This is a **responsive restaurant website** with:
+## 🍽️ Features
 
-- Homepage, menu, and checkout pages  
-- Dynamic **menu ordering system**  
-- **Order summary** and **checkout with receipt**  
-- Mobile-friendly navigation  
-- Smooth animations and interactive buttons
+- **Interactive Menu**: Browse through a variety of dishes with real-time quantity controls.
+- **Online Ordering System**: Add items to your cart and see an instant order summary with total price calculation.
+- **Brand Identity**: Unified brand identity with a custom logo (`GUSTO_logo.png`) and specific favicon (`GUSTO_favicon.png`) across all pages.
+- **Contact & Feedback**: A professional contact page with a functional layout, integrated map, and inquiry form.
+- **Brand Story**: A dedicated "About Us" page detailing the restaurant's history, values, and culinary team.
+- **Seamless Checkout**: A dedicated checkout page that displays a detailed receipt, including subtotal, tax (17.5%), and final total.
+- **Order Persistence**: Uses `localStorage` to keep your order details even if you refresh the page or navigate away.
+- **Printable Receipts**: Generate a physical or PDF copy of your order confirmation directly from the browser.
+- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices with a custom hamburger menu for smaller screens.
+- **Modern Aesthetics**: Built with high-quality images, smooth transitions, and elegant typography (Google Fonts).
 
-**Technologies used:**
+## 🛠️ Tech Stack
 
-- **HTML5** – structure  
-- **CSS3** – styling and responsive design  
-- **JavaScript (ES6)** – interactivity and order management  
-- **Font Awesome** – icons  
+- **HTML5**: Semantic structure for better SEO and accessibility.
+- **CSS3**: Custom styling with a focus on modern layouts (Flexbox/Grid), transitions, and responsive design.
+- **JavaScript (Vanilla)**: Core logic for state management, cart functionality, and DOM manipulation.
+- **Font Awesome**: Professional iconography for enhanced UI.
+- **Google Fonts**: Custom typography to match the premium brand identity.
 
----
+## 📁 Project Structure
 
-## Features
+```text
+restaurant-website/
+├── css/                # Stylesheets
+│   └── style.css
+├── js/                 # JavaScript logic
+│   └── script.js
+├── images/             # All project assets and food photography
+├── pages/              # Sub-pages
+│   ├── checkout.html
+│   ├── menu.html
+│   ├── about.html
+│   └── contact.html
+├── index.html          # Landing page (Entry Point)
+└── README.md           # Project documentation
+```
 
-1. **Navigation Bar**  
-   - Fixed at top  
-   - Hamburger menu for mobile  
-   - Active link highlighting  
+## 🚀 Getting Started
 
-2. **Homepage**  
-   - Hero section with large header and call-to-action buttons  
-   - Features section highlighting services  
-   - Menu preview with prices and images  
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/AnasBerkaoui710/Restaurant-website.git
+    ```
+2.  Open `index.html` in your favorite web browser.
+3.  Enjoy the Gusto dining experience!
 
-3. **Menu Page**  
-   - Menu items displayed with images, descriptions, and prices  
-   - Quantity controls for each item  
-   - Live **order summary** with total price  
-   - Checkout button saves the order to `localStorage`  
+## 📜 How It Works
 
-4. **Checkout Page**  
-   - Displays ordered items, subtotal, tax, and total  
-   - Interactive receipt section  
-   - Print receipt functionality  
-   - Timeline/status tracker for order  
-
-5. **Responsive Design**  
-   - Fully functional on desktop, tablet, and mobile devices  
-
-
----
-
-
-## Setup Instructions
-
-1. Clone or download the project files.  
-2. Ensure the folder structure matches the above.  
-3. Open `index.html` in a browser to start.  
-4. Add menu items, then proceed to checkout to see the receipt functionality.  
-5. For mobile testing, resize the browser or open developer tools.
-
----
-
-## How It Works
-
-1. **Adding Items**  
-   - On the menu page, use the **+ / - buttons** to select item quantity.  
-   - The **order summary** at the bottom updates live.
-
-2. **Checkout**  
-   - Clicking **Checkout** stores order items and total in `localStorage`.  
-   - `checkout.html` reads this data and displays the receipt.
-
-3. **Printing Receipt**  
-   - On checkout page, click **Print Receipt**.  
-   - Opens print-friendly view with order details.
+1.  **Selection**: On the `menu.html` page, use the `+` and `-` buttons to choose your items.
+2.  **Summary**: The "Your Order" sidebar updates in real-time as you modify your selection.
+3.  **Checkout**: Click the "Checkout" button to save your order state and move to the confirmation page.
+4.  **Confirmation**: Review your final receipt, which automatically calculates local taxes (17.5% VAT).
+5.  **Print**: Use the "Print Receipt" button to save your order record.
 
 ---
 
-## Dependencies
-
-- [Font Awesome](https://cdnjs.com/libraries/font-awesome) – icons  
-- Modern browser with **JavaScript enabled**  
-- No backend required; all functionality is **client-side**
-
----
-
-## Notes
-
-- All totals and orders are **saved locally in the browser**.  
-- Tax is calculated at **8.25%**.  
-- The project is fully functional **offline** except for external Font Awesome CDN.  
-
----
-
-## Future Improvements
-
-- Persist cart between page reloads  
-- Add **user authentication** and real backend integration  
-- Add **payment simulation** or API integration  
-- Dark mode toggle for better accessibility  
-
+Built with ❤️ by [Anas Berkaoui](https://github.com/AnasBerkaoui710)

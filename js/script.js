@@ -85,10 +85,17 @@ function initCheckoutPage() {
     const subtotalEl = document.querySelector('.subtotal-price');
     const taxEl = document.querySelector('.tax-price');
     const totalEl = document.querySelector('.total-price');
+    const dateEl = document.getElementById('currentDate');
+    const timeEl = document.getElementById('currentTime');
 
     if (!receiptContainer || !subtotalEl || !taxEl || !totalEl) {
         return;
     }
+
+    // Set Date and Time
+    const now = new Date();
+    if (dateEl) dateEl.textContent = now.toLocaleDateString();
+    if (timeEl) timeEl.textContent = now.toLocaleTimeString();
 
     const savedOrder = JSON.parse(localStorage.getItem('orderItems') || '{}');
     let subtotal = 0;
@@ -97,19 +104,19 @@ function initCheckoutPage() {
 
     Object.entries(savedOrder).forEach(([name, item]) => {
         subtotal += item.total;
+        const unitPrice = item.price;
 
-        receiptContainer.innerHTML += `
-            <div class="receipt-item">
-                <div class="item-info">
-                    <h3>${name}</h3>
-                    <span class="item-quantity">×${item.quantity}</span>
-                </div>
-                <div class="item-price">$${item.total.toFixed(2)}</div>
-            </div>
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${name}</td>
+            <td>${item.quantity}</td>
+            <td>$${unitPrice.toFixed(2)}</td>
+            <td>$${item.total.toFixed(2)}</td>
         `;
+        receiptContainer.appendChild(tr);
     });
 
-    const tax = subtotal * 0.0825;
+    const tax = subtotal * 0.175; // Updated to 17.5% as per image
     const total = subtotal + tax;
 
     subtotalEl.textContent = `$${subtotal.toFixed(2)}`;

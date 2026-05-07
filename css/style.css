@@ -1142,3 +1142,458 @@ footer {
         align-self: flex-end;
     }
 }
+
+
+
+/* Contact Page Styles */
+.contact-container {
+    max-width: 1200px;
+    margin: 120px auto 80px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+}
+
+.contact-header {
+    margin-bottom: 40px;
+}
+
+.contact-header h2 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-header p {
+    color: #666;
+    font-size: 18px;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #fcfcfc;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #E55727;
+    outline: none;
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(229, 87, 39, 0.1);
+}
+
+.submit-btn {
+    background-color: #E55727;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #c94a20;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(229, 87, 39, 0.3);
+}
+
+.contact-info-cards {
+    display: grid;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.info-card i {
+    font-size: 24px;
+    color: #E55727;
+    background-color: rgba(229, 87, 39, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.info-card h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.info-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.map-section {
+    margin-top: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* About Page Styles */
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+.about-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.story-content h2 {
+    font-size: 36px;
+    color: #E55727;
+    margin-bottom: 20px;
+}
+
+.story-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.value-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.value-card i {
+    font-size: 48px;
+    color: #E55727;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.chef-section {
+    background-color: #333;
+    color: white;
+    padding: 80px 0;
+}
+
+.chef-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.chef-content h2 {
+    font-size: 36px;
+    color: #E55727;
+    margin-bottom: 20px;
+}
+
+.chef-content p {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.chef-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(229, 87, 39, 0.2);
+}
+
+@media (max-width: 768px) {
+    .story-grid, .chef-grid, .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-hero h1 {
+        font-size: 48px;
+    }
+}
+
+/* Receipt Redesign Styles */
+.order-receipt-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 5px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.receipt-header-main {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.receipt-header-main h1 {
+    color: #E55727;
+    font-size: 42px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chef-logo {
+    width: 80px;
+    height: 80px;
+    background-color: #E55727;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 40px;
+    position: relative;
+}
+
+.restaurant-info-box {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.receipt-tagline {
+    font-style: italic;
+    font-size: 24px;
+    margin: 20px 0;
+    color: #333;
+    font-weight: 500;
+}
+
+.receipt-meta {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.meta-value {
+    background-color: #ffe8e0;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+    min-width: 80px;
+}
+
+.receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.receipt-table th {
+    background-color: #E55727;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #E55727;
+}
+
+.receipt-table td {
+    padding: 12px;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+}
+
+.receipt-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.receipt-table tbody tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+.receipt-table tbody tr:last-child td {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.receipt-table td:last-child {
+    background-color: #ffe8e0;
+    font-weight: 600;
+    text-align: right;
+}
+
+.receipt-table th:last-child {
+    text-align: right;
+}
+
+.receipt-table th:nth-child(2),
+.receipt-table th:nth-child(3),
+.receipt-table td:nth-child(2),
+.receipt-table td:nth-child(3) {
+    text-align: center;
+}
+
+.total-label-cell {
+    text-align: right;
+    font-weight: 600;
+    color: #333;
+}
+
+.net-total-label {
+    text-align: right;
+    font-weight: 700;
+    color: #333;
+    font-size: 18px;
+}
+
+.receipt-table tfoot td {
+    border: none;
+    padding: 10px;
+}
+
+.receipt-footer-msg {
+    text-align: center;
+    font-size: 28px;
+    margin: 40px 0;
+    font-weight: 500;
+    color: #333;
+}
+
+.buffet-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.buffet-label {
+    color: #E55727;
+    font-weight: 700;
+}
+
+.buffet-price {
+    background-color: #ffe8e0;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.action-buttons-receipt {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-home-receipt {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    background-color: #333;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-home-receipt:hover {
+    background-color: #555;
+}
+
+@media print {
+    nav, footer, .action-buttons-receipt {
+        display: none;
+    }
+    .checkout-wrapper {
+        box-shadow: none;
+        padding: 0;
+    }
+}
